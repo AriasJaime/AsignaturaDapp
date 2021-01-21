@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import Header from './Header';
 import Evaluaciones from './Evaluaciones/Evaluaciones';
 import Alumnos from './Alumnos/Alumnos';
-import Calificaciones from './Calificaciones';
+import Calificaciones from './Calificaciones/Calificaciones';
 import MisCosas from './MisCosas';
 
 const Navegacion = () => (
