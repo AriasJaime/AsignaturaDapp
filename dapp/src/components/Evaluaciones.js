@@ -1,5 +1,5 @@
 const Evaluaciones = () => (
-    <header className="AppHeader">
+    <header className="AppEvaluaciones">
         <h2>
             Evaluaciones
         </h2>
