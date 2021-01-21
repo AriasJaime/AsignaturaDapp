@@ -1,20 +1,22 @@
-import{newContextComponents} from "@drizzle/react-components";
+import {newContextComponents} from "@drizzle/react-components";
+
 import EvaluacionesHead from "./EvaluacionesHead";
 import EvaluacionesBody from "./EvaluacionesBody";
 
-const{ContractData}=newContextComponents;
+import EvaluacionesSinComponentes from "./EvaluacionesSinComponentes";
+
+const {ContractData} = newContextComponents;
 
 const Evaluaciones = (props) => (
     <section className="AppEvaluaciones">
-        <h2>
-            Evaluaciones
-        </h2>
+        <h2>Evaluaciones</h2>
+
         <ContractData
             drizzle={props.drizzle}
             drizzleState={props.drizzleState}
             contract={"Asignatura"}
             method={"evaluacionesLength"}
-            render={el=>(
+            render={el => (
                 <table>
                     <EvaluacionesHead/>
                     <EvaluacionesBody drizzle={props.drizzle}
@@ -22,7 +24,9 @@ const Evaluaciones = (props) => (
                                       evaluacionesLength={el}/>
                 </table>
             )}
-            />
+        />
+
+        <EvaluacionesSinComponentes drizzle={props.drizzle} drizzleState={props.drizzleState} />
     </section>
 );
 
